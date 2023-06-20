@@ -5,3 +5,7 @@ Some description!!!!
 
 Some changes made.
 
+## Local Development
+
+Open index.html in your browser.
+
