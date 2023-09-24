@@ -1,1 +1,12 @@
 exampl 1`
+scss code
+.post {
+    transition: all 400ms ease;
+This CSS rule sets up a transition effect on all properties with a duration of 400 milliseconds and an easing function of "ease." Here's what each part means:
+all: It means the transition effect will apply to all CSS properties that change.
+400ms: This specifies the duration of the transition in milliseconds. In this case, it's 400 milliseconds, which means any property changes will take 0.4 seconds to transition.
+ease: This is the easing function, which controls the speed curve of the transition. "ease" provides a smooth and gradual change in speed.
+    &:hover {
+        transform: scale(1.04);
+    }
+This scales (enlarges) the element by a factor of 1.04 when hovered
