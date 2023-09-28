@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background: red;
+  color: rgb(206, 93, 93);
+}
+header button {
+  background: rgb(169, 219, 164);
+}
+header button::after {
+  content: "helloeeeeeeeeee";
+  color: red;
+  background: blue;
+}
+
+.contact button {
+  background: rgb(169, 219, 164);
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: row;
+  background: blue;
+}/*# sourceMappingURL=style.css.map */
