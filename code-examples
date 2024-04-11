@@ -9,4 +9,5 @@ ease: This is the easing function, which controls the speed curve of the transit
     &:hover {
         transform: scale(1.04);
     }
+    
 This scales (enlarges) the element by a factor of 1.04 when hovered

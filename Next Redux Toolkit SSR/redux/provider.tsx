@@ -1,0 +1,25 @@
+'use client';
+import { useEffect, useRef } from 'react';
+import { Provider } from 'react-redux';
+import { makeStore, AppStore } from './store';
+import { getUserInfo } from './features/auth/userService';
+
+export default function ReduxProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const storeRef = useRef<AppStore>();
+  if (!storeRef.current) {
+    // Create the store instance the first time this renders
+    storeRef.current = makeStore();
+  }
+
+  // useEffect(() => {
+  //   if (storeRef.current !== undefined) {
+  //     storeRef.current.dispatch(getUserInfo());
+  //   }
+  // }, []);
+
+  return <Provider store={storeRef.current}>{children}</Provider>;
+}
