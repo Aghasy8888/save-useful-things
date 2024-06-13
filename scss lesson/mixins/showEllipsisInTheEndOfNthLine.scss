@@ -1,0 +1,11 @@
+@import "./variables";
+@import "./header";
+
+@mixin showEllipsisInTheEnd($numOfLines, $maxWidth) {
+  display: -webkit-box;
+  max-width: $maxWidth;
+  -webkit-line-clamp: $numOfLines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -11,3 +11,15 @@ ease: This is the easing function, which controls the speed curve of the transit
     }
     
 This scales (enlarges) the element by a factor of 1.04 when hovered
+
+
+show ellipsis in the end of nth line
+
+h2 {
+  display: -webkit-box;
+  max-width: 400px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

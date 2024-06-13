@@ -2,17 +2,20 @@ import { useEffect } from 'react';
 
 const useCloseModal = (
   modalIsOpen: boolean,
-  setModalIsOpen: TSetModalIsOpen,
-  tag: string = 'aside'
+  setModalIsOpen: TSetBoolean,
+  tag: string = 'aside',
+  ignoringElement?: string
 ) => {
   const handleDocumentClick = (event: MouseEvent) => {
     if (modalIsOpen && !(event.target as Element).closest(tag)) {
       if (
         (event.target as Element).closest('dialog') ||
-        (event.target as Element).closest('img')
+        (ignoringElement &&
+          (event.target as Element).closest(ignoringElement))
       ) {
         return;
       }
+
       setModalIsOpen(false);
     }
   };

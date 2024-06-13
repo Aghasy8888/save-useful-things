@@ -1,0 +1,61 @@
+@import '/app/variables.module.scss';
+
+.dropdownCtn {
+  position: relative;
+}
+
+.disabled.dropdownCtn {
+}
+
+.open.dropdownCtn {
+  .dropdownHeader {
+    border: 2px solid $light-gray;
+  }
+  dialog.dropdownOptions {
+    position: absolute;
+    top: 106px;
+    left: -3px;
+    background-color: $card;
+    width: 687px;
+    @include flex-column(16px);
+    align-items: flex-start;
+
+    padding: 32px 0 37px 32px;
+    .dropdownOption,
+    h3 {
+      color: $white;
+      font-variant-numeric: slashed-zero;
+      @include set-font-size-weight(40px, 400);
+      line-height: 120%; /* 48px */
+    }
+    h3 {
+      cursor: default;
+    }
+    .dropdownOption {
+      padding-left: 32px;
+      cursor: pointer;
+    }
+  }
+}
+
+.closed.dropdownCtn {
+  cursor: pointer;
+  .arrow {
+    position: absolute;
+    right: 9px;
+    top: 8px;
+  }
+  .dropdownHeader {
+    border: 2px solid $mid-dark-gray;
+  }
+}
+
+.regionDropdown.open.dropdownCtn {
+  dialog.dropdownOptions {
+    height: 880px;
+    overflow-y: scroll;
+    .dropdownOption {
+      padding-left: 0;
+    }
+  }
+}
