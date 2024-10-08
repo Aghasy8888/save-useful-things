@@ -1,13 +1,14 @@
 'use client';
 
 import LogIn from '@/app/LogIn';
-import { setUserInfo } from '@/redux/features/auth/authSlice_2';
+import { selectUserInfo, setUserInfo } from '@/redux/features/auth/authSlice_2';
+import { selectIsModarator } from '@/redux/features/authSlice';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { useEffect } from 'react';
 
 const Auth = ({ usersInfo }: { usersInfo: IUserInfoTwo }) => {
-  const username = useAppSelector((state) => state.authReducer.user);
-  const isModerator = useAppSelector((state) => state.authReducer.isModarator);
+  const username = useAppSelector(selectUserInfo);
+  const isModerator = useAppSelector(selectIsModarator);
   const dispatch = useAppDispatch();
 
   useEffect(() => {

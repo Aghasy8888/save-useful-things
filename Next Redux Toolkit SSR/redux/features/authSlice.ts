@@ -36,5 +36,8 @@ export const auth = createSlice({
   },
 });
 
+export const selectIsModarator = (state: RootState) =>
+  state.authReducerTwo.isModarator;
+
 export const { login, logOut, toggleModerator } = auth.actions;
 export default auth.reducer;
